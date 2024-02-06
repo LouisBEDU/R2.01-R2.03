@@ -23,4 +23,5 @@ javac -d bin src/tp01/*.java
 ```
 ## Historique
 
-`tp01 ➔ 31/01/2024`
+`tp01 ➔ 31/01/2024`\
+`tp02 ➔ 07/02/2024`
