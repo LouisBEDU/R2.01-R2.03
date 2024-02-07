@@ -22,6 +22,18 @@ public class Competitor {
         return "[" + this.numberSign + ", " + this.score + " points, " + this.time + "s]";
     }
 
+    public boolean equals(Competitor C) {
+        if (this == C) return true;
+        if (C == null) return false;
+        if (this.numberSign.equals(C.numberSign) && this.score == C.score) return true;
+        return false;
+    }
+
+    boolean isFaster(Competitor other) {
+        if (other.time < this.time) return true;
+        return false;
+    }
+
     public static void main(String[] args) {
         Competitor[] tab = new Competitor[]{
             new Competitor(1,45,15,20),
@@ -32,9 +44,7 @@ public class Competitor {
         };
 
         for (Competitor competitor : tab) {
-            if (competitor.numberSign != null) {
-                System.out.println(competitor.display());
-            }
+            if (competitor.numberSign != null && tab[0].isFaster(competitor)) System.out.println(competitor);
         }
     }
 }

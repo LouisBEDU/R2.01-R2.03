@@ -1,7 +1,5 @@
 package tp02;
 
-import util.Keyboard;
-
 /**
  * NDicePlayerGame
  */
@@ -44,7 +42,7 @@ public class NDicePlayerGame {
 
     public static void main(String[] args) {
         Dice dice = new Dice(6);
-        NDicePlayerGame game = new NDicePlayerGame(Keyboard.readInt("Saisir un entier :"));
+        NDicePlayerGame game = new NDicePlayerGame(10);
 
         for (int i = 0; i < game.players.length; i++) {
             game.players[i].playDice(dice);
